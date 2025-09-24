@@ -1,0 +1,129 @@
+/* Sayfayı ortala */
+.login-page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #f6f7fb 0%, #eef1f7 100%);
+  padding: 24px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* Kart */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+  padding: 28px;
+  animation: pop 220ms ease-out;
+}
+
+@keyframes pop {
+  from { transform: scale(.98); opacity: .8; }
+  to   { transform: scale(1);    opacity: 1;   }
+}
+
+.login-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.login-subtitle {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #667085;
+}
+
+/* Form alanları */
+.form-field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.form-label {
+  font-size: 13px;
+  color: #344054;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 14px;
+  transition: border-color 120ms, box-shadow 120ms, background 120ms;
+  background: #fff;
+}
+
+.input::placeholder { color: #98a2b3; }
+
+.input:focus {
+  outline: none;
+  border-color: #7f56d9;
+  box-shadow: 0 0 0 4px rgba(127, 86, 217, 0.12);
+}
+
+/* Hata görünümü */
+.input.is-invalid {
+  border-color: #f04438;
+  background: #fff5f5;
+  box-shadow: 0 0 0 4px rgba(240, 68, 56, 0.12);
+}
+
+.error-text {
+  font-size: 12px;
+  color: #f04438;
+}
+
+/* Checkbox alanı */
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 14px;
+  color: #344054;
+  font-size: 14px;
+}
+
+.checkbox-row input {
+  width: 18px; height: 18px;
+  accent-color: #7f56d9;
+}
+
+/* Buton */
+.button {
+  width: 100%;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  background: #7f56d9;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 120ms ease, background 120ms ease;
+  box-shadow: 0 6px 14px rgba(127, 86, 217, 0.25);
+}
+
+.button:hover { transform: translateY(-1px); }
+.button:active { transform: translateY(0); }
+
+.button:disabled {
+  background: #e9e7f5;
+  color: #9e8fd6;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Alt bilgi */
+.form-foot {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: #98a2b3;
+}
